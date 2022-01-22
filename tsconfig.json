@@ -5,8 +5,8 @@
     "lib" : ["es6"],                
     "emitDecoratorMetadata": true,                        
     "module": "commonjs",                                
-     "rootDir": "./src",                                  
-         "typeRoots": [
+    "rootDir": "./src",                                  
+    "typeRoots": [
        "./node_modules/@types",
        "./src/@types"
      ],                                  
@@ -20,13 +20,16 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@controller/*": ["./src/controller/*"],
-      "@model/*": ["./src/model/*"],
-      "@view/*": ["./src/view/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@models/*": ["./src/models/*"],
+      "@views/*": ["./src/views/*"],
       "@config/*": ["./src/config/*"],
       "@repository/*": ["./src/repository/*"],
-      "@service/*": ["./src/service/*"],
+      "@services/*": ["./src/services/*"],
       "@util/*": ["./src/util/*"] 
     }
-  }
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }
