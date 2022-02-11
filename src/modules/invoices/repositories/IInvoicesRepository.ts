@@ -6,6 +6,6 @@ export default interface IInvoicesRepository {
   findById(id: number): Invoice | undefined;
   update(data: IUpdateInvoiceDTO): Invoice[];
   create(data: ICreateInvoiceDTO): Invoice;
-  save(invoice: Invoice): Invoice[];
+  save(): Invoice[];
   delete(id: number): Invoice[];
 }

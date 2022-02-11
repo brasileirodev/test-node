@@ -11,8 +11,8 @@ class CreateUserService {
   ) {}
 
   public execute(data: ICreateInvoiceDTO): Invoice[] {
-    const invoice = this.invoicesRepository.create(data);
-    const invoices = this.invoicesRepository.save(invoice);
+    this.invoicesRepository.create(data);
+    const invoices = this.invoicesRepository.save();
     return invoices;
   }
 }

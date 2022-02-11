@@ -17,6 +17,7 @@ class DeleteInvoiceByIdService {
       throw new AppError('Invoice not found');
     }
     const invoices = this.invoicesRepository.delete(id);
+    this.invoicesRepository.save();
     return invoices;
   }
 }

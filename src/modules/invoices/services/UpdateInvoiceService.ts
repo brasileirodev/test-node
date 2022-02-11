@@ -16,6 +16,7 @@ class UpdateInvoiceService {
     if (!invoice) {
       throw new Error('Fail to update, invoice not found');
     }
+    this.invoicesRepository.save();
     return invoice;
   }
 }
